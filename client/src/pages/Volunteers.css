@@ -1,0 +1,226 @@
+.volunteers-page {}
+
+.volunteers-header {
+  margin-bottom: 1.5rem;
+}
+
+.volunteers-header h1 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 4px;
+}
+
+.volunteers-header p {
+  font-size: 14px;
+  color: #888;
+}
+
+.volunteers-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.search-input {
+  padding: 9px 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  width: 280px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.search-input:focus {
+  border-color: #185fa5;
+}
+
+.filter-tabs {
+  display: flex;
+  gap: 6px;
+}
+
+.filter-tab {
+  padding: 7px 14px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background: #fff;
+  font-size: 13px;
+  color: #555;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.filter-tab:hover { background: #f0f4f8; }
+
+.filter-tab.active {
+  background: #185fa5;
+  color: #fff;
+  border-color: #185fa5;
+}
+
+.volunteers-stats {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 1.5rem;
+}
+
+.vstat {
+  background: #fff;
+  border-radius: 10px;
+  padding: 1rem 1.5rem;
+  border: 1px solid #eee;
+  text-align: center;
+  min-width: 100px;
+}
+
+.vstat-num {
+  display: block;
+  font-size: 28px;
+  font-weight: 700;
+  color: #185fa5;
+}
+
+.vstat-label {
+  font-size: 12px;
+  color: #888;
+}
+
+.volunteers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px;
+}
+
+.volunteer-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.25rem;
+  border: 1px solid #eee;
+  transition: box-shadow 0.2s;
+}
+
+.volunteer-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.volunteer-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 1rem;
+}
+
+.volunteer-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.volunteer-info {
+  flex: 1;
+}
+
+.volunteer-info h3 {
+  font-size: 15px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 2px;
+}
+
+.volunteer-info p {
+  font-size: 12px;
+  color: #888;
+}
+
+.avail-badge {
+  font-size: 11px;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-weight: 500;
+  text-transform: capitalize;
+  flex-shrink: 0;
+}
+
+.avail-available { background: #eaf3de; color: #3b6d11; }
+.avail-busy { background: #faeeda; color: #854f0b; }
+.avail-unavailable { background: #fcebeb; color: #a32d2d; }
+
+.volunteer-details {
+  margin-bottom: 10px;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.detail-label {
+  font-size: 12px;
+  color: #888;
+}
+
+.detail-value {
+  font-size: 12px;
+  color: #333;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.skill-tag {
+  font-size: 11px;
+  padding: 3px 10px;
+  background: #f0f4f8;
+  color: #185fa5;
+  border-radius: 20px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.volunteer-footer {
+  padding-top: 10px;
+  border-top: 1px solid #f5f5f5;
+}
+
+.joined-date {
+  font-size: 11px;
+  color: #aaa;
+}
+
+.loading {
+  text-align: center;
+  padding: 3rem;
+  color: #888;
+  font-size: 14px;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 3rem;
+  color: #888;
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid #eee;
+  font-size: 14px;
+}
+
+.empty-state p { margin-bottom: 4px; }
