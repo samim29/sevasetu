@@ -1,60 +1,61 @@
 const mongoose = require('mongoose')
-const bcrypt = require('bcryptjs')
 const dotenv = require('dotenv')
 dotenv.config()
+
+require('./models/User')
+require('./models/Volunteer')
+require('./models/Survey')
+require('./models/Task')
+
+const User = mongoose.model('User')
+const Volunteer = mongoose.model('Volunteer')
+const Survey = mongoose.model('Survey')
+const Task = mongoose.model('Task')
 
 const seed = async () => {
   await mongoose.connect(process.env.MONGODB_URI)
   console.log('Connected...')
 
-  const User = mongoose.model('User', require('./models/User').schema)
-  const Volunteer = mongoose.model('Volunteer', require('./models/Volunteer').schema)
-  const Survey = mongoose.model('Survey', require('./models/Survey').schema)
-  const Task = mongoose.model('Task', require('./models/Task').schema)
-
   // ─── Users ───────────────────────────────────────────
-  const adminPassword = await bcrypt.hash('admin123', 12)
-  const volPassword = await bcrypt.hash('volunteer123', 12)
-
   const admin = await User.create({
     name: 'Arjun Mehta',
     email: 'admin@sevasetu.com',
-    password: adminPassword,
+    password: 'admin123',
     role: 'admin'
   })
 
   const vol1 = await User.create({
     name: 'Rahul Sharma',
     email: 'rahul@sevasetu.com',
-    password: volPassword,
+    password: 'volunteer123',
     role: 'volunteer'
   })
 
   const vol2 = await User.create({
     name: 'Priya Roy',
     email: 'priya@sevasetu.com',
-    password: volPassword,
+    password: 'volunteer123',
     role: 'volunteer'
   })
 
   const vol3 = await User.create({
     name: 'Amit Das',
     email: 'amit@sevasetu.com',
-    password: volPassword,
+    password: 'volunteer123',
     role: 'volunteer'
   })
 
   const vol4 = await User.create({
     name: 'Sneha Bose',
     email: 'sneha@sevasetu.com',
-    password: volPassword,
+    password: 'volunteer123',
     role: 'volunteer'
   })
 
   const vol5 = await User.create({
     name: 'Rajesh Kumar',
     email: 'rajesh@sevasetu.com',
-    password: volPassword,
+    password: 'volunteer123',
     role: 'volunteer'
   })
 
@@ -328,14 +329,3 @@ seed().catch(err => {
   console.error('Seed error:', err)
   process.exit(1)
 })
-
-/*
-Login credentials:
-Admin  → admin@sevasetu.com / admin123
-Vol 1  → rahul@sevasetu.com / volunteer123
-Vol 2  → priya@sevasetu.com / volunteer123
-Vol 3  → amit@sevasetu.com / volunteer123
-Vol 4  → sneha@sevasetu.com / volunteer123
-Vol 5  → rajesh@sevasetu.com / volunteer123
-
-*/ 
