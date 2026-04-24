@@ -1,16 +1,89 @@
-# React + Vite
+# SevaSetu — Smart Volunteer Coordination Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> AI-powered platform that helps NGOs digitize paper surveys, 
+> prioritize community needs, and match volunteers intelligently.
 
-Currently, two official plugins are available:
+## 🔗 Live Demo
+[sevasetu.netlify.app](https://sevasetu.netlify.app)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🔐 Demo Login
+| Role | Email | Password |
+|------|-------|----------|
+| Admin | admin@sevasetu.com | admin123 |
+| Volunteer | rahul@sevasetu.com | volunteer123 |
 
-## React Compiler
+## ✨ Features
+- 📄 Paper survey digitization using OCR
+- 🤖 AI urgency ranking using Google Gemini
+- 🎯 Smart volunteer matching using Gemini AI
+- 📊 Real-time community needs dashboard
+- ✅ Complete task lifecycle tracking
+- 🔐 Role-based access (Admin/Volunteer)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Tech Stack
+| Layer | Technology |
+|-------|-----------|
+| Frontend | React.js + Vite |
+| Backend | Node.js + Express.js |
+| Database | MongoDB Atlas |
+| Auth | Firebase Authentication |
+| OCR | Tesseract.js |
+| AI | Google Gemini API |
+| Deployment | Netlify + Render |
 
-## Expanding the ESLint configuration
+## 🚀 Local Setup
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Backend
+```bash
+cd server
+npm install
+# Add .env file with required variables
+npm run dev
+```
+
+### Frontend
+```bash
+cd client
+npm install
+# Add .env file with required variables
+npm run dev
+```
+
+### Environment Variables
+
+**server/.env**
+PORT=5000
+MONGODB_URI=your_mongodb_uri
+JWT_SECRET=your_jwt_secret
+CLIENT_URL=http://localhost:5173
+GEMINI_API_KEY=your_gemini_key
+GOOGLE_VISION_API_KEY=your_vision_key
+
+**client/.env**
+VITE_API_URL=http://localhost:5000
+VITE_FIREBASE_API_KEY=your_key
+VITE_FIREBASE_AUTH_DOMAIN=your_key
+VITE_FIREBASE_PROJECT_ID=your_key
+VITE_FIREBASE_STORAGE_BUCKET=your_key
+VITE_FIREBASE_MESSAGING_SENDER_ID=your_key
+VITE_FIREBASE_APP_ID=your_key
+
+## 📁 Project Structure
+sevasetu/
+├── client/          # React frontend
+│   ├── src/
+│   │   ├── components/
+│   │   ├── context/
+│   │   ├── pages/
+│   │   ├── services/
+│   │   └── utils/
+└── server/          # Node.js backend
+├── controllers/
+├── middleware/
+├── models/
+├── routes/
+└── utils/
+
+## 🏆 Hackathon
+Built for **Solution Challenge 2026 India** by GDG on Campus
+Theme: Smart Resource Allocation
