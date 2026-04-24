@@ -4,7 +4,7 @@
 > prioritize community needs, and match volunteers intelligently.
 
 ## 🔗 Live Demo
-[sevasetu.netlify.app](https://sevasetu.netlify.app)
+[sevasetu.netlify.app](https://sevasetuapp.netlify.app)
 
 ## 🔐 Demo Login
 | Role | Email | Password |
